@@ -5,28 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body>
-    <header>
-        <nav>
-          <a href="./">WebStudio</a>
-          <ul>
-            <li><a href="">Студия</a></li>
-            <li><a href="./portfolio.html">Портфолио</a></li>
-            <li><a href="">Контакты</a></li>
-          </ul>
-        </nav>
-          <ul>
-            <li><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-            <li><a href="tel:+380961111111">+38 096 111 11 11</a></li>
-          </ul>
-    </header>
+<body class="body">
+    <header class="header">
+      <nav>
+        <a class="header-logo" href="./"><span class="web">Web</span><span class="studio">Studio</span></a>
+        <ul class="header-nav">
+          <li><a class="nav-button" href="">Студия</a></li>
+          <li><a class="nav-button" href="./portfolio.html">Портфолио</a></li>
+          <li><a class="nav-button" href="">Контакты</a></li>
+        </ul>
+      </nav class="header-link">
+        <ul>
+          <li><a class="mail" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+          <li><a class="tel" href="tel:+380961111111">+38 096 111 11 11</a></li>
+        </ul>
+   </header>
+    
     <main>
-        <section>
+        <section class="main">
             <h1 hidden>Кнопки</h1>
             <nav>
-              <ul>
+              <ul class="main-button">
                 <li><button type="button">Все</button></li>
                 <li><button type="button">Веб-сайты</button></li>    
                 <li><button type="button">Приложения</button></li>
@@ -35,9 +37,9 @@
               </ul>
             </nav>
         </section>
-        <section>
-            <h2 hidden>Плитки</h2>
-            <ul>    
+        <section class="mosaic">
+          <h2 hidden>Плитки</h2>
+            <ul class="mosaic-tile">    
               <li>
                 <img src="./images/portfolio/img1.jpg" alt="Ультрабук" width="370" height="294" />
                 <h3>Технокряк</h3>
@@ -86,10 +88,10 @@
             </ul>
       </section>
     </main>
-    <footer>
-      <a href="./">WebStudio</a>
-      <address>г. Киев, пр-т Леси Украинки, 26</address>
-        <ul>
+    <footer class="footer">
+      <a class="footer-logo" href="./"><span class="web">Web</span><span class="studio">Studio</span></a>
+      <address class="footer-address">г. Киев, пр-т Леси Украинки, 26</address>
+        <ul class="footer-link">
           <li><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
           <li><a href="tel:+380961111111">+38 096 111 11 11</a></li>
         </ul>
