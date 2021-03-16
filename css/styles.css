@@ -1,29 +1,87 @@
-/* основной цвет текста #212121 */
-/* вторичный цвет текста #757575 */
-/* акцент лого #2196F3 */
-/* белый цвет #FFFFFF */
-/* фон футер и хедер #2F303A */
-/* вторичный цвет фона #E5E5E5 */
-/* фон кнопок #F5F4FA */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v19/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCMPrcVIT9d0c-dYA.woff)
+    format("woff");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
 
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fABc4AMP6lbBP.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfABc4AMP6lbBP.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmYUtfABc4AMP6lbBP.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+:root {
+  --white-color: #ffffff;
+  --main-text-color: #212121;
+  --second-text-color: #757575;
+  --active-text-color: #2196f3;
+  --background-main-color: #e5e5e5;
+  --background-button-color: #f5f4fa;
+  --background-footer-color: #2f303a;
+}
 
 /* body */
 
 .body {
- font-family: link:"https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+  font-family: "Roboto", sans-serif;
 }
-
 
 /* header */
 
 .header .main {
-  background-color: #ffffff;
+  background-color: var(--background-main-color);
 }
 
 .header-logo,
 .footer-logo,
 button {
   cursor: pointer;
+}
+
+.header-logo,
+.footer-logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 26px;
 }
 
 .web {
@@ -33,145 +91,287 @@ button {
   color: #212121;
 }
 
-
 /* nav header */
 
 li {
   list-style-type: none;
 }
 
-}
 .nav-button {
-color: #212121;
-font-family: Roboto;
-font-size: 14;
-font-style: normal;
-font-weight: 500;
-line-height: 16;
-
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 16, 41px;
+  size: 14px;
+  color: var(--main-text-color);
 }
 
-.nav-button:hover {
-    color: #2196f3;
+.nav-button:hover,
+.nav-button:focus {
+  color: var(--active-text-color);
 }
 
-/* 
-
-.mail, .tel {
-    color: #757575;
-}
-.mail:hover,
-.tel:hover {
-    color: #2196f3;
-}
-
- */
-
-a[href^="mailto"], 
+a[href^="mailto"],
 a[href^="tel"] {
-    color: #212121;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 16, 41px;
+  size: 14px;
+  color: var(--main-text-color);
 }
+
 a[href^="mailto"]:hover,
-a[href^="tel"]:hover {
-    color: #2196f3;
-}
-  
-
-/* main button */
-
-.btn1 {
-    width: 73px;
-    height: 38px;
-    left: 495px;
-    top: 174px;
-    color: #212121; 
-    background: #F5F4FA;
-    border-radius: 4px; 
+a[href^="mailto"]:focus,
+a[href^="tel"]:hover,
+a[href^="tel"]:focus {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 16, 41px;
+  size: 14px;
+  color: var(--active-text-color);
 }
 
-.btn1:hover, .btn1:focus {
-    color: #FFFFFF;
-    background: #2196F3;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+/* main */
+
+button {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--main-text-color);
+  background: var(--background-button-color);
+  border-radius: 4px;
 }
 
-.btn2 {
-    width: 128px;
-    height: 38px;
-    left: 576px;
-    top: 174px;
-    color: #212121; 
-    background: #F5F4FA;
-    border-radius: 4px;
+button:hover,
+button:focus {
+  color: var(--white-color);
+  background: var(--active-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.btn2:hover, .btn2:focus {
-    color: #FFFFFF;
-    background: #2196F3;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+/*  
+.btn-all {
+  width: 73px;
+  height: 38px;
+  left: 495px;
+  top: 174px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #212121;
+  background: #f5f4fa;
+  border-radius: 4px;
 }
 
-.btn3 {
-    width: 145px;
-    height: 38px;
-    left: 712px;
-    top: 174px;
-    color: #212121; 
-    background: #F5F4FA;
-    border-radius: 4px; 
+.btn-all:hover,
+.btn-all:focus {
+  color: #ffffff;
+  background: #2196f3;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.btn3:hover, .btn3:focus {
-    color: #FFFFFF;
-    background: #2196F3;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-
+.btn-web {
+  width: 128px;
+  height: 38px;
+  left: 576px;
+  top: 174px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #212121;
+  background: #f5f4fa;
+  border-radius: 4px;
 }
 
-.btn4 {
-    width: 103px;
-    height: 38px;
-    left: 865px;
-    top: 174px;
-    color: #212121; 
-    background: #F5F4FA;
-    border-radius: 4px; 
+.btn-web:hover,
+.btn-web:focus {
+  color: #ffffff;
+  background: #2196f3;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.btn4:hover, .btn4:focus {
-    color: #FFFFFF;
-    background: #2196F3;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-
-}
- 
-
-.btn5 {
-    width: 130px;
-    height: 38px;
-    left: 976px;
-    top: 174px;
-    color: #212121; 
-    background: #F5F4FA;
-    border-radius: 4px; 
+.btn-apps {
+  width: 145px;
+  height: 38px;
+  left: 712px;
+  top: 174px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #212121;
+  background: #f5f4fa;
+  border-radius: 4px;
 }
 
-.btn5:hover,.btn5:focus {
-    color: #FFFFFF;
-    background: #2196F3;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+.btn-apps:hover,
+.btn-apps:focus {
+  color: #ffffff;
+  background: #2196f3;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-h3 {
-    
+.btn-design {
+  width: 103px;
+  height: 38px;
+  left: 865px;
+  top: 174px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #212121;
+  background: #f5f4fa;
+  border-radius: 4px;
 }
 
+.btn-design:hover,
+.btn-design:focus {
+  color: #ffffff;
+  background: #2196f3;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
 
+.btn-marketing {
+  width: 130px;
+  height: 38px;
+  left: 976px;
+  top: 174px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #212121;
+  background: #f5f4fa;
+  border-radius: 4px;
+}
 
+.btn-marketing:hover,
+.btn-marketing:focus {
+  color: #ffffff;
+  background: #2196f3;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+*/
+
+/* main mosaic */
+
+.mosaic-tile h3 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 36px;
+  color: var(--main-text-color);
+}
+
+.mosaic-tile p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--second-text-color);
+}
 
 /* Footer */
 
-}
 .footer {
-  background-color: #2f303a;
+  background-color: var(--background-footer-color);
+}
+
+.footer-address {
+  color: var(--white-color);
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.footer-link a {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.main-hero {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 60px;
+  color: var(--white-color);
+}
+
+.section-hero {
+  width: 1600px;
+  height: 600px;
+  background-color: var(--background-footer-color);
+}
+
+.section-features h3 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--main-text-color);
+}
+.section-features p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--second-text-color);
+}
+
+.section-activity h2 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  color: var(--main-text-color);
+}
+
+.section-team h2 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  color: var(--main-text-color);
+}
+
+.section-team p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--second-text-color);
 }
